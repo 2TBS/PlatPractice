@@ -12,8 +12,8 @@ public class NewBehaviourScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKey(KeyCode.A))
-            transform.Translate(Vector2.left * .25);
+            transform.Translate(Vector2.left * .25f);
         if (Input.GetKey(KeyCode.D))
-            transform.Translate(Vector2.right * .25);
+            transform.Translate(Vector2.right * .25f);
     }
 }
