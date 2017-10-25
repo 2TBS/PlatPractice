@@ -1,2 +1,5 @@
-# PlatPractice
-This is a a platformer.
+# Platformer - Polygons
+Polygon based platformer created with Unity and Tiled.
+
+##Credits
+
