@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="2017.10.11" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" source="2TBS/untitled.tsx"/>
+ <tileset firstgid="121" source="2TBS/untitled2.tsx"/>
+ <tileset firstgid="125" source="2TBS/untitled4.tsx"/>
+ <tileset firstgid="173" source="2TBS/untitled5.tsx"/>
+ <tileset firstgid="221" source="2TBS/untitled3.tsx"/>
+ <layer name="Tile Layer 1" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztmrEKwjAURfMbgj+gu4OfplYnR8eMHYPf6QtYCJJBayDnhTtcztby7mnhNXQXQjg6z96ysZwsZ8fcvue4WG6W55+5W66NrvXtvaZijt59ruVc8TE5ZBrER5IPFOWDRflgUT5YHMVHrPhosd/12BM/fcyAftey9JFC/+d9LUsfCdCrfMgHifLBonywKB8slj4ioNcWPvLu6OlcNOdR8UHo9Vfqe5BF+WBRPliUDxblg8VRfMSKD6/noiP4WOj9/VgoHyzKB4t5jkPo/x9Yi7wA0s2QHA==
+  </data>
+ </layer>
+</map>
