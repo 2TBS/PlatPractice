@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pl_Controller : MonoBehaviour {
 	public Rigidbody2D PlayerRG;
+	public Camera mainCamera;
 	public LayerMask layerM;
 	public int speed;
 	public int jumpForce;
@@ -33,5 +34,9 @@ public class Pl_Controller : MonoBehaviour {
 
 			Debug.Log("jump key");			
 		}
+	}
+
+	void Update() {
+		mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, mainCamera.transform.position.z);
 	}
 }
