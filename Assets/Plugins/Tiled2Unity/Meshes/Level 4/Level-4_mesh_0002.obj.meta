@@ -1,23 +1,23 @@
 fileFormatVersion: 2
-guid: cfb2836068ed9a34f9b223960b8852f9
-timeCreated: 1509237670
+guid: ad3fee994c3c86a4687d4f010bd03e73
+timeCreated: 1511555522
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: Practice2._mesh_0002
+    100000: Level-4_mesh_0002
     100002: //RootNode
-    400000: Practice2._mesh_0002
+    400000: Level-4_mesh_0002
     400002: //RootNode
-    2300000: Practice2._mesh_0002
-    3300000: Practice2._mesh_0002
-    4300000: Practice2._mesh_0002
+    2300000: Level-4_mesh_0002
+    3300000: Level-4_mesh_0002
+    4300000: Level-4_mesh_0002
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
-    legacyGenerateAnimations: 4
+    legacyGenerateAnimations: 0
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
@@ -43,14 +43,14 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -60,7 +60,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 2
     normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0
