@@ -8,6 +8,10 @@ public class Pl_Controller : MonoBehaviour {
 	public LayerMask layerM;
 	public int speed;
 	public int jumpForce;
+
+	///Speed multiplier - larger value = faster
+    public float moveSpeed = .5f;
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -38,5 +42,10 @@ public class Pl_Controller : MonoBehaviour {
 
 	void Update() {
 		mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, mainCamera.transform.position.z);
+
+		if (Input.GetKey(KeyCode.A))
+            transform.Translate(Vector2.left * moveSpeed);
+        if (Input.GetKey(KeyCode.D))
+            transform.Translate(Vector2.right * moveSpeed);
 	}
 }
