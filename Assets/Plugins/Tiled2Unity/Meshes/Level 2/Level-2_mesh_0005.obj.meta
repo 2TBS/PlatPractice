@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 49fe6b53a21bdbe42bc5cdcbcac6fc73
-timeCreated: 1509421657
+guid: 74c5384d6828a334e9f8009e69f2100f
+timeCreated: 1511553255
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: TutorialEnemiesLevel-copy_mesh_0002
+    100000: Level-2_mesh_0005
     100002: //RootNode
-    400000: TutorialEnemiesLevel-copy_mesh_0002
+    400000: Level-2_mesh_0005
     400002: //RootNode
-    2300000: TutorialEnemiesLevel-copy_mesh_0002
-    3300000: TutorialEnemiesLevel-copy_mesh_0002
-    4300000: TutorialEnemiesLevel-copy_mesh_0002
+    2300000: Level-2_mesh_0005
+    3300000: Level-2_mesh_0005
+    4300000: Level-2_mesh_0005
   materials:
     importMaterials: 0
     materialName: 0
@@ -43,14 +43,14 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
