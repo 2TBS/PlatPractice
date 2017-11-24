@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: b1d992e055aea6447accb73141ae8550
-timeCreated: 1511555880
+guid: bca9d515cb2efd54c852fbfe1278bc3e
+timeCreated: 1511566337
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: Level3_mesh_0001
+    100000: Level-5_mesh_0002
     100002: //RootNode
-    400000: Level3_mesh_0001
+    400000: Level-5_mesh_0002
     400002: //RootNode
-    2300000: Level3_mesh_0001
-    3300000: Level3_mesh_0001
-    4300000: Level3_mesh_0001
+    2300000: Level-5_mesh_0002
+    3300000: Level-5_mesh_0002
+    4300000: Level-5_mesh_0002
   materials:
     importMaterials: 0
     materialName: 0
@@ -50,7 +50,7 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
