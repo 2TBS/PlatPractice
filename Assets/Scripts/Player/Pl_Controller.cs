@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pl_Controller : MonoBehaviour {
-	public Rigidbody2D PlayerRG;
+	public Rigidbody PlayerRG;
 	public Camera mainCamera;
 	public LayerMask layerM;
 	public int speed;
 	public int jumpForce;
+	public double velocity;
 
 	///Speed multiplier - larger value = faster
     public float moveSpeed = .5f;
-	
+
+	///Acceleration due to gravity
+	public float gravity = 9.8f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -21,17 +25,14 @@ public class Pl_Controller : MonoBehaviour {
 	void FixedUpdate () {
 		//Horizontal Movement
 		float value = Input.GetAxis ("Horizontal"); 
-		PlayerRG.velocity = new Vector2(value*speed,PlayerRG.velocity.y);
 		//Jump movement
 		if(Input.GetButtonDown("Jump")){
 			//Raycast
-			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1.0f);
-			Debug.Log(hit);
+			RaycastHit hit;
 
-
-			if (hit != null && hit.collider.tag == "ground") {
+			if (Physics.Linecast(transform.position, Vector3.down, out hit) && hit.collider.tag == "ground") {
 				Debug.Log(hit);
-				PlayerRG.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
+				PlayerRG.AddForce (Vector3.up * jumpForce, ForceMode.Impulse);
 				Debug.DrawLine (transform.position, hit.point, Color.cyan);
 			}
 			Debug.DrawRay(transform.position, transform.TransformDirection (Vector3.down) *1000, Color.white);
@@ -44,8 +45,10 @@ public class Pl_Controller : MonoBehaviour {
 		mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, mainCamera.transform.position.z);
 
 		if (Input.GetKey(KeyCode.A))
-            transform.Translate(Vector2.left * moveSpeed);
+            transform.Translate(Vector3.left * moveSpeed);
         if (Input.GetKey(KeyCode.D))
-            transform.Translate(Vector2.right * moveSpeed);
+            transform.Translate(Vector3.right * moveSpeed);
+
+		transform.Translate(Vector3.down * velocity * Time.deltaTime);
 	}
 }
