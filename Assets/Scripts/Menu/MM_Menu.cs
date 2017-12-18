@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour {
-
+public class MM_Menu : MonoBehaviour {
+    int level = 1;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,6 +16,16 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void LoadScene() {
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(level);
 	}
+    public void BackScene()
+    {
+        SceneManager.LoadScene(level-1);
+        level--;
+    }
+    public void GameOver()
+    {
+        level = 0;
+        SceneManager.LoadScene(level);
+    }
 }
