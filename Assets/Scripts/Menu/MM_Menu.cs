@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MM_Menu : MonoBehaviour {
-    int level = 1;
+
+
+	public int currLevel = 1;
+	public Text levelText;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,17 +20,31 @@ public class MM_Menu : MonoBehaviour {
 		
 	}
 
-	public void LoadScene() {
-		SceneManager.LoadScene(level);
+	public void Load() {
+		SceneManager.LoadScene(currLevel);
 	}
-    public void BackScene()
-    {
-        SceneManager.LoadScene(level-1);
-        level--;
-    }
-    public void GameOver()
-    {
-        level = 0;
-        SceneManager.LoadScene(level);
+
+	public void ChangeLevel(bool increment) {
+		try {
+			levelText.text = "" + currLevel;
+		} catch {
+			Debug.Log("LevelText not present");
+		}
+		currLevel += (increment) ? 1 : -1;
+	}
+
+	public void LoadScene() {
+		ChangeLevel(true);
+		SceneManager.LoadScene(currLevel);
+  	}
+
+    public void BackScene() {
+         ChangeLevel(false);
+		 Load();
+     }
+
+    public void GameOver() {
+         currLevel = 0;
+         Load();
     }
 }
