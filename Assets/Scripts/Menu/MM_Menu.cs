@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class MM_Menu : MonoBehaviour {
-
-
-	public int currLevel = 1;
-	public Text levelText;
+public class MainMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -17,14 +12,10 @@ public class MM_Menu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		levelText.text = "" + currLevel;
+		
 	}
 
-	public void Load() {
-		SceneManager.LoadScene(currLevel);
-	}
-
-	public void ChangeLevel(bool increment) {
-		currLevel += (increment) ? 1 : -1;
+	public void LoadScene() {
+		SceneManager.LoadScene(1);
 	}
 }
