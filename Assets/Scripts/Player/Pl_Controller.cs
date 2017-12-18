@@ -8,7 +8,7 @@ public class Pl_Controller : MonoBehaviour {
 	public LayerMask layerM;
 	public int speed;
 	public int jumpForce;
-	public double velocity;
+	public float velocity;
 
 	///Speed multiplier - larger value = faster
     public float moveSpeed = .5f;
