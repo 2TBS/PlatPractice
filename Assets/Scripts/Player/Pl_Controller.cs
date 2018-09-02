@@ -47,5 +47,26 @@ public class Pl_Controller : MonoBehaviour {
             transform.Translate(Vector2.left * moveSpeed);
         if (Input.GetKey(KeyCode.D))
             transform.Translate(Vector2.right * moveSpeed);
+		if (Input.GetKey (KeyCode.W))
+			JumpStart ();
+	}
+	void JumpStart() {
+		if(0==0){
+			//Raycast
+			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, moveSpeed);
+			Debug.Log(hit.ToString());
+
+
+			if (hit.collider != null 
+				&& hit.collider.tag == "ground") {
+				Debug.Log(hit);
+				Debug.Log(hit.collider.name);
+				PlayerRG.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
+				Debug.DrawLine (transform.position, hit.point, Color.cyan);
+			}
+			Debug.DrawRay(transform.position, transform.TransformDirection (Vector3.down) *1000, Color.white);
+
+			Debug.Log("jump key");			
+		}
 	}
 }
